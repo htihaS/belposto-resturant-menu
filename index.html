@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,400;1,500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+		<a href="#" class="logo">Bel Posto<span>.</span><br><h6><small>The cafe</small></h6></a>
+		<div class="menuToggle" onclick="toggleMenu()"></div>
+		<ul class="navigation">
+			<li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+			<li><a href="#about" onclick="toggleMenu()">About</a></li>
+			<li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+			<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+		</ul>
+	</header>
+	<section class="banner" id="banner">
+		<div class="content">
+			<h2 style="color: white;font-style: italic;font-size:xx-large	;">Ambiance that pleases,flavor that seizes.</h2>
+
+			<a href="#" class="btn">Our Menu</a>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="row">
+			<div class="col50">
+				<h2 class="titleText"><span>A</span>bout Us</h2>
+				<p> We serve best.<br>"Bel Posto The Cafe",started in the year 2020. 
+					<br>Location: Road Number 44, Jubliee Hills, Hyderabad.
+				</p>
+				
+			</div>
+			<div class="col50">
+				<div class="imgBx">
+					<img src="./images/img1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="menu" id="menu">
+		<div class="title">
+			<h2 class="titleText">Our <span>M</span>enu</h2>
+			
+		</div>
+		<div class="content">
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/cof.jpeg" alt="">
+				</div>
+				<div class="text">
+					<h3>Coffee</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/menu2.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>Soup</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/menu3.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>Pasta</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/moctails.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>Moctails</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/burger.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>Burger</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/sandwich.png" alt="">
+				</div>
+				<div class="text">
+					<h3>Sandwich</h3>
+				</div>
+			</div>
+		</div>
+		<div class="title">
+			<a href="" class="btn">View All</a>
+		</div>
+	</section>
+						
+	<section class="testimonials" id="testimonials">
+		<div class="title white">
+			<h2 class="titleText">They <span>S</span>aid About Us</h2>
+	
+		</div>
+		<div class="content">
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/pavi.jpeg" alt="">
+				</div>
+				<div class="text">
+					<p> One of the cool,cozy places I'd visited recently. Good food,good ambiance,good evening jam.
+					</p>
+					<h3>Pavithra Mannepalli</h3>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="./images/srivalli.jpeg" alt="">
+				</div>
+				<div class="text">
+					<p>Looking for a perfect brunch,coffee date,hunger pangs,perfect date with your loved one?! Should look at this.Do visit and enjoy  :-)
+					</p>
+					<h3>Srivalli Achanta</h3>
+				</div>
+			</div>
+			</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="title">
+			<h2 class="titleText"><span>C</span>ontact Us</h2>
+		</div>
+		<div class="contactForm">
+			<h3>Send Message</h3>
+			<div class="inputBox">
+				<input type="text" placeholder="Name">
+			</div>
+			<div class="inputBox">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="inputBox">
+				<textarea placeholder="Your message here..."></textarea>
+			</div>
+			<div class="inputBox">
+				<input type="submit" value="Send">
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript">
+		window.addEventListener('scroll', function() {
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0);
+		})
+
+		function toggleMenu() {
+			const menuToggle = document.querySelector('.menuToggle')
+			const navigation = document.querySelector('.navigation')
+			navigation.classList.toggle('active')
+			menuToggle.classList.toggle('active')
+		}
+	</script>
+</body>
+
+</html>
